@@ -15,6 +15,7 @@ const getAiInstance = (): GoogleGenAI => {
     const apiKey = (userApiKey && userApiKey.trim() !== "") ? userApiKey : envKey;
     
     if (!apiKey || apiKey === "undefined" || apiKey.trim() === "" || apiKey === "your_api_key_here") {
+        // Thay vì throw error gây crash app ngay lập tức, ta sẽ ném lỗi khi thực sự gọi hàm
         throw new Error("API_KEY_MISSING");
     }
     
