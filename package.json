@@ -1,0 +1,33 @@
+
+{
+  "name": "tiem-giang-app",
+  "version": "1.0.0",
+  "description": "AI Photo Restoration by Dinh Thanh",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-exe": "electron-builder build --windows"
+  },
+  "build": {
+    "appId": "com.dinhthanh.photorestore",
+    "productName": "Phuc Hoi Anh Dinh Thanh",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "vite.svg"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "installerIcon": "vite.svg",
+      "uninstallerIcon": "vite.svg"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
